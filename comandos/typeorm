@@ -1,3 +1,4 @@
+--Criacao das tabelas no banco de dados
 npx typeorm migration:create .\src\migration\create-table-user
 npx typeorm migration:create .\src\migration\create-table-state
 npx typeorm migration:create .\src\migration\create-table-city
