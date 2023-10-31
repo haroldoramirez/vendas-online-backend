@@ -29,4 +29,6 @@ export class UserEntity {
 
   @UpdateDateColumn({name: 'updated_at'})
   updatedAt: Date;
+    addresses: any;
+  orders: any;
 }

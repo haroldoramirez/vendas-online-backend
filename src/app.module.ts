@@ -2,6 +2,17 @@ import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { StateModule } from './state/state.module';
+import { CityModule } from './city/city.module';
+import { AddressModule } from './address/address.module';
+import { OrderModule } from './order/order.module';
+import { PaymentModule } from './payment/payment.module';
+import { PaymentStatusModule } from './payment-status/payment-status.module';
+import { OrderProductModule } from './order-product/order-product.module';
+import { ProductModule } from './product/product.module';
+import { CategoryModule } from './category/category.module';
+import { CartProductModule } from './cart-product/cart-product.module';
+import { CartModule } from './cart/cart.module';
 
 @Module({
   imports: [
@@ -15,12 +26,23 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       password: process.env.DB_PASSWORD,
       port: Number(process.env.DB_POR),
       username: process.env.DB_USERNAME,
-      //synchronize: true, codigo para tirar a 
+      //synchronize: true, codigo para desativa o a criacao de tabelas automaticas
       entities: [`${__dirname}/**/*.entity{.js,.ts}`],
       migrations: [`${__dirname}/migration/{.ts,*.js}`],
       migrationsRun: true
     }),
-    UserModule],
+    UserModule,
+    StateModule,
+    CityModule,
+    AddressModule,
+    OrderModule,
+    PaymentModule,
+    PaymentStatusModule,
+    OrderProductModule,
+    ProductModule,
+    CategoryModule,
+    CartProductModule,
+    CartModule],
   controllers: [],
   providers: [],
 })
