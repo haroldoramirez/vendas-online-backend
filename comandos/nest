@@ -1,5 +1,11 @@
 npm i -g @nestjs/cli
 
+========================
+
 nest g module state
 nest g controller state
 nest g service state
+
+obs repetir os comandos para todas as entidades
+
+==================
