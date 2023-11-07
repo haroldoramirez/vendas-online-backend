@@ -13,6 +13,7 @@ import { ProductModule } from './product/product.module';
 import { CategoryModule } from './category/category.module';
 import { CartProductModule } from './cart-product/cart-product.module';
 import { CartModule } from './cart/cart.module';
+import { CacheModule } from './cache/cache.module';
 
 @Module({
   imports: [
@@ -42,7 +43,8 @@ import { CartModule } from './cart/cart.module';
     ProductModule,
     CategoryModule,
     CartProductModule,
-    CartModule],
+    CartModule,
+    CacheModule],
   controllers: [],
   providers: [],
 })
