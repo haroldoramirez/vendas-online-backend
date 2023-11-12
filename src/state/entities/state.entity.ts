@@ -3,6 +3,7 @@ import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, Up
 
 @Entity({ name: 'state' })
 export class StateEntity {
+
   @PrimaryGeneratedColumn('rowid')
   id: number;
 
@@ -20,4 +21,5 @@ export class StateEntity {
 
   @OneToMany(() => CityEntity, (city) => city.state)
   cities?: CityEntity[];
+  
 }
