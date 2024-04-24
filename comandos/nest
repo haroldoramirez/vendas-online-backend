@@ -1,0 +1,5 @@
+//Criando modulo de usuário
+//nest g module user
+
+//Criando a controller do usuário
+//nest g controller user
